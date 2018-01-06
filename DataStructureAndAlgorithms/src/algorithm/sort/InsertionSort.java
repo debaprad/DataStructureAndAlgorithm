@@ -7,7 +7,7 @@ public class InsertionSort {
 		for(int i=1;i<n;i++)
 		{
 			int temp = arr[i];
-			for(int j = i-1; j>=0 && arr[j]>arr[i] ; j--)
+			for(int j = i-1; j>=0 && arr[j]>temp ; j--)
 			{
 				arr[j+1] = arr[j];
 			}
