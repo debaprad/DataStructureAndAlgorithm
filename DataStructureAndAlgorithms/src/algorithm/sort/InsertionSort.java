@@ -7,11 +7,12 @@ public class InsertionSort {
 		for(int i=1;i<n;i++)
 		{
 			int temp = arr[i];
-			for(int j = i-1; j>=0 && arr[j]>temp ; j--)
+			int j = i-1;
+			for(; j>=0 && arr[j]>temp ; j--)
 			{
 				arr[j+1] = arr[j];
 			}
-			arr[i]=temp;
+			arr[j+1]=temp;
 		}
 	}
 	public static void main(String[] args) {
@@ -19,8 +20,8 @@ public class InsertionSort {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] =  (int)(Math.random() * 13) + 1;
 		}
-		SelectionSort selectionSort = new SelectionSort();
-		selectionSort.selectionSort(arr,arr.length);
+		InsertionSort insertionSort = new InsertionSort();
+		insertionSort.insertionSort(arr,arr.length);
 		for(int value : arr)
 		{
 			System.out.print(value+",");
